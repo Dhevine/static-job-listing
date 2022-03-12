@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script defer src="./script.js"></script>
+    <title>Frontend Mentor | Job Listings</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="container--header">
+      <figure>
+        <picture>
+          <source
+            media="(max-width: 375px)"
+            srcset="./images/bg-header-mobile.svg"
+          />
+          <source media="(min-width: 376px)"
+          srcset="./images/bg-header-desktop.svg"">
+
+          <img
+            src="./images/bg-header-desktop.svg"
+            class="bg-header-img"
+            alt=""
+          />
+        </picture>
+      </figure>
+    </header>
+
+    <section class="filter-container">
+      <!-- <div class="select-icon">
+        <button class="user-option">Frontend</button>
+        <button class="remove-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#FFF" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/></svg>
+        </button>
+      </div>
+       -->
+
+      <button id="clear-btn">Clear</button>
+    </section>
+
+    <section class="main-container">
+
+    </section>
+     
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  </body>
+</html>
