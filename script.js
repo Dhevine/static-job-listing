@@ -10,13 +10,15 @@ let allArr = []
 // filter jobs
 function filterJobs(elem, Object_Arr) {
   filteredArr = []
+  // place both id and all langauges, roles e.t.c 
   const dee = Object_Arr.map(el => [el.id,...el.languages , el.role, ...el.tools,el.level ]);
 
+  // check if the inputed array is included in the genreal array, then we take the first element which is the id 
   dee.forEach(el => {
     const dee = elem.every(res => el.includes(res));
     // console.log(dee);
     if(dee) {
-      filteredArr.push(dee)
+      filteredArr.push(el[0]) // pushing the id 
     }
 
   })
@@ -47,7 +49,7 @@ function appendStacks_Used(data, job_ListingArr, type) {
 // append searched jobs
 function available_Jobs(arr1, arr2) {
   let finalArr = []
-  // removeElem()
+  removeElem()
   arr1.forEach((id_No) => {
     const [appendArr] = arr2.filter((el) => el.id === id_No)
     finalArr.push(appendArr)
@@ -55,9 +57,8 @@ function available_Jobs(arr1, arr2) {
   })
 
   const job_stack = document.querySelectorAll(".job-stack")
-  // console.log(finalArr);
-  // appendStacks_Used(job_stack, finalArr, "tools")
-  // appendStacks_Used(job_stack, finalArr, "languages")
+  appendStacks_Used(job_stack, finalArr, "tools")
+  appendStacks_Used(job_stack, finalArr, "languages")
 }
 
 // append ticked opton
