@@ -10,31 +10,17 @@ let allArr = []
 // filter jobs
 function filterJobs(elem, Object_Arr) {
   filteredArr = []
-  Object_Arr.forEach((el) => {
-    el.all_stack = [...el.tools, ...el.languages, el.role, el.level]
+  const dee = Object_Arr.map(el => [el.id,...el.languages , el.role, ...el.tools,el.level ]);
+
+  dee.forEach(el => {
+    const dee = elem.every(res => el.includes(res));
+    // console.log(dee);
+    if(dee) {
+      filteredArr.push(dee)
+    }
+
   })
 
-  let mapArr = []
-  let mapObj = {}
-
-  for (let i = 0; i < Object_Arr.length; i++) {
-    for (let j = 0; j < elem.length; j++) {
-      if (Object_Arr[i].all_stack.includes(elem[j])) {
-        mapArr.push(Object_Arr[i].id)
-      }
-    }
-  }
-
-  mapArr.forEach((item) => {
-    if (mapObj[item]) mapObj[item] += 1
-    else mapObj[item] = 1
-  })
-
-  for (let [key, value] of Object.entries(mapObj)) {
-    if (value === currentArr.length) {
-      filteredArr.push(+key)
-    }
-  }
 }
 
 function removeElem() {
@@ -44,6 +30,7 @@ function removeElem() {
 // dynamically appending tools and languages to the stack
 function appendStacks_Used(data, job_ListingArr, type) {
   // console.log(data, job_ListingArr,type);
+
   data.forEach((el, i) => {
     const stackArr = job_ListingArr[i][type] //access object using bracket notation on typei.e [type]
     if (stackArr.length > 0) {
@@ -60,7 +47,7 @@ function appendStacks_Used(data, job_ListingArr, type) {
 // append searched jobs
 function available_Jobs(arr1, arr2) {
   let finalArr = []
-  removeElem()
+  // removeElem()
   arr1.forEach((id_No) => {
     const [appendArr] = arr2.filter((el) => el.id === id_No)
     finalArr.push(appendArr)
@@ -69,8 +56,8 @@ function available_Jobs(arr1, arr2) {
 
   const job_stack = document.querySelectorAll(".job-stack")
   // console.log(finalArr);
-  appendStacks_Used(job_stack, finalArr, "tools")
-  appendStacks_Used(job_stack, finalArr, "languages")
+  // appendStacks_Used(job_stack, finalArr, "tools")
+  // appendStacks_Used(job_stack, finalArr, "languages")
 }
 
 // append ticked opton
@@ -197,3 +184,5 @@ function getData() {
 }
 
 getData()
+
+
