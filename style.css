@@ -1,7 +1,8 @@
 * {
  margin: 0;
  padding: 0;
- box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
 }
  
 @font-face {
@@ -56,11 +57,16 @@ header {
  border: 1px solid;
  z-index: 11;
  padding:  0.5rem;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- flex-wrap: wrap;
+ -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
  background-color: white;
  position: relative;
- justify-content: flex-start;
+ -webkit-box-pack: start;
+     -ms-flex-pack: start;
+         justify-content: flex-start;
  display: none;
 }
 
@@ -76,6 +82,8 @@ header {
  border: 1px solid;
  margin: 0.4rem 0.2rem;
  border-radius: 10px;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
  overflow: hidden;
 }
@@ -104,7 +112,8 @@ header {
  margin-bottom: 4rem;
  padding-left:1rem;
  border-radius: 10px;
- box-shadow: inset 0px 0px 3px rgb(227, 218, 218);
+ -webkit-box-shadow: inset 0px 0px 3px rgb(227, 218, 218);
+         box-shadow: inset 0px 0px 3px rgb(227, 218, 218);
 }
 
 .border {
@@ -122,9 +131,14 @@ header {
 
 
 .job--updates {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- align-items: center;
- flex-wrap: wrap;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+ -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
  color: var(--desaturated-color);
  font-size: 0.7rem;
 }
@@ -193,7 +207,9 @@ header {
   margin-top: 0;
   /* border: 1px solid; */
   padding: 1rem;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 100px 0.5rem 3fr 0.5rem 5fr;
   grid-template-columns: 100px 3fr 5fr;
   grid-column-gap: 0.5rem;
   place-items: center
@@ -207,8 +223,13 @@ header {
   border: none;
   margin-left: auto;
   margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
  }
 }
