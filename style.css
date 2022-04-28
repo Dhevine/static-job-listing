@@ -1,250 +1,244 @@
 * {
- margin: 0;
- padding: 0;
- -webkit-box-sizing: border-box;
-         box-sizing: border-box;
-}
- 
-@font-face {
- font-family: 'Spartan';
- src: url(./Spartan/static/Spartan-Black.ttf);
- font-weight: 900;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
- font-family: 'Spartan';
- src: url(./Spartan/static/Spartan-Regular.ttf);
- font-weight: 500;
+  font-family: "Spartan";
+  src: url(./Spartan/static/Spartan-Black.ttf);
+  font-weight: 900;
 }
 
 @font-face {
- font-family: 'Spartan';
- src: url(./Spartan/static/Spartan-ExtraBold.ttf);
- font-weight: 600;
+  font-family: "Spartan";
+  src: url(./Spartan/static/Spartan-Regular.ttf);
+  font-weight: 500;
 }
- 
+
+@font-face {
+  font-family: "Spartan";
+  src: url(./Spartan/static/Spartan-ExtraBold.ttf);
+  font-weight: 600;
+}
+
 :root {
- --header-background--Color: hsl(180, 29%, 50%);
---background--color:hsl(180, 52%, 96%);
---filter-backgroundColor:hsl(180, 31%, 95%);
---grayish-cyan: hsl(180, 8%, 52%);
---very-dark-grayish-cyan: hsl(180, 14%, 20%);
---desaturated-color: hsl(180, 29%, 50%);
-
+  --header-background--Color: hsl(180, 29%, 50%);
+  --background--color: hsl(180, 52%, 96%);
+  --filter-backgroundColor: hsl(180, 31%, 95%);
+  --grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+  --desaturated-color: hsl(180, 29%, 50%);
 }
-
 
 body {
-    background-color: var(--background--color);
+  background-color: var(--background--color);
 }
 header {
- /* height: 300px; */
- background-color: var(--header-background--Color);
+  /* height: 300px; */
+  background-color: var(--header-background--Color);
 }
 
 .bg-header-img {
- width: 100%;
- 
+  width: 100%;
 }
 
 .main-container {
- /* border: 1px solid; */
- padding: 4rem 1rem;
- background-color: var(--background--color);
+  /* border: 1px solid; */
+  padding: 4rem 1rem;
+  background-color: var(--background--color);
 }
-
 
 .filter-container {
- border-radius: 5px;
- margin: 0 1rem;
- margin-top: -2rem;
- border: 1px solid;
- z-index: 11;
- padding:  0.5rem;
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
- background-color: white;
- position: relative;
- -webkit-box-pack: start;
-     -ms-flex-pack: start;
-         justify-content: flex-start;
- display: none;
- max-width: 700px;
-}
-
-#clear-btn {
- margin: auto 0;
- margin-left: auto;
- border: none;
- color: var(--desaturated-color);
- background-color: transparent;
- cursor: pointer;
-}
-
-.select-icon{
- border: 1px solid;
- margin: 0.4rem 0.2rem;
- border-radius: 10px;
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- overflow: hidden;
-}
-
-.user-option,.remove-icon {
- padding: 0.3rem 0.5rem;
- border: none;
-}
-
-.user-option {
- color: var(--desaturated-color);
- font-weight: bolder;
- background-color: var(--filter-backgroundColor);
-}
-
-.remove-icon {
- background-color: var(--desaturated-color);
- width: 100%;
- cursor: pointer;
-}
-
-
-
-.jobs {
- background-color: #ffffff;
- border: 3px solid white;
- margin-top: 2rem;
- margin-bottom: 5rem;
- padding-left:1rem;
- border-radius: 10px;
- -webkit-box-shadow: 0px 4px 45px 5px rgb(227, 218, 218);
-         box-shadow: 0px 4px 45px 5px rgb(227, 218, 218);
-}
-
-.border {
- border-left: 7px solid var(--header-background--Color);
-}
-
-.jobs ul {
- list-style: none;
-}
-
-.job-img {
- margin-top: -50px;
- margin-left: 10px;
-}
-
-
-.job--updates {
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- -webkit-box-align: center;
-     -ms-flex-align: center;
-         align-items: center;
- -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
- color: var(--desaturated-color);
- font-size: 0.7rem;
-}
-
-.new-tag, .featured-tag {
- padding: 8px;
- margin: 0 0.2rem;
- border-radius: 50px;
- font-family: 'Spartan';
- font-size: .6rem;
-}
-.new-tag {
- margin-left: 0.5rem;
- color: white;
- background-color: var(--desaturated-color);
-}
-.featured-tag {
- background-color: black;
- color: white;
-}
-
-.job--type {
- padding: 0.5rem 0;
- font-weight: 900;
- font-family: 'Spartan';
- word-spacing: 2px;
-}
-
-.job-specifiaction {
- color: var(--grayish-cyan);
- font-family: 'Spartan';
- font-weight: 500;
-}
-
-.job-specifiaction span {
- margin-right: 3px;
-}
-
-
-.job-stack {
- border-top: 1px solid var(--grayish-cyan);
- padding: 0.5rem 0;
- margin-top: 1rem;
-}
-
-.job-btn {
- border: none;
- padding: 7px 5px;
- margin: 0.3rem 0.5rem;
- margin-left: 0;
- color: var(--header-background--Color);
- background-color: var(--filter-backgroundColor);
- font-family: 'Spartan';
- font-weight: 600;
- border-radius: 5px;
- cursor: pointer;
-}
-
-@media screen and (min-width:700px) {
-    .filter-container {
-         margin-inline: auto;
-
-    }
-}
-
-@media  screen and (min-width:1250px) {
- .main-container {
-  padding: 5rem;
- }
-
- .jobs {
-  margin: 1.2rem;
-  margin-top: 0;
-  /* border: 1px solid; */
-  padding: 1rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100px 0.5rem 3fr 0.5rem 5fr;
-  grid-template-columns: 100px 3fr 5fr;
-  grid-column-gap: 0.5rem;
-  place-items: center
- }
-
- .job-img {
-  margin: 0;
- }
-
- .job-stack {
-  border: none;
-  margin-left: auto;
-  margin-right: 1rem;
+  border-radius: 5px;
+  margin: 0 1rem;
+  margin-top: -2rem;
+  border: 1px solid;
+  z-index: 11;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
- }
+  flex-wrap: wrap;
+  background-color: white;
+  position: relative;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: none;
+  max-width: 700px;
+}
+
+#clear-btn {
+  margin: auto 0;
+  margin-left: auto;
+  border: none;
+  color: var(--desaturated-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.select-icon {
+  border: 1px solid;
+  margin: 0.4rem 0.2rem;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.user-option,
+.remove-icon {
+  padding: 0.3rem 0.5rem;
+  border: none;
+}
+
+.user-option {
+  color: var(--desaturated-color);
+  font-weight: bolder;
+  background-color: var(--filter-backgroundColor);
+}
+
+.remove-icon {
+  background-color: var(--desaturated-color);
+  width: 100%;
+  cursor: pointer;
+}
+
+.jobs {
+  background-color: #ffffff;
+  border: 3px solid white;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  padding-left: 1rem;
+  /* border-radius: 10px; */
+  /* border-radius: 0px 10px 10px 0px; */
+  -webkit-box-shadow: 0px 4px 45px 5px rgb(227, 218, 218);
+  box-shadow: 0px 4px 45px 5px rgb(227, 218, 218);
+}
+
+.border {
+  border-left: 7px solid var(--header-background--Color);
+}
+
+.jobs ul {
+  list-style: none;
+}
+
+.job-img {
+  margin-top: -50px;
+  margin-left: 10px;
+}
+
+.job--updates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: var(--desaturated-color);
+  font-size: 0.7rem;
+}
+
+.new-tag,
+.featured-tag {
+  padding: 8px;
+  margin: 0 0.2rem;
+  border-radius: 50px;
+  font-family: "Spartan";
+  font-size: 0.6rem;
+}
+.new-tag {
+  margin-left: 0.5rem;
+  color: white;
+  background-color: var(--desaturated-color);
+}
+.featured-tag {
+  background-color: black;
+  color: white;
+}
+
+.job--type {
+  padding: 0.5rem 0;
+  font-weight: 900;
+  font-family: "Spartan";
+  word-spacing: 2px;
+}
+
+.job-specifiaction {
+  color: var(--grayish-cyan);
+  font-family: "Spartan";
+  font-weight: 500;
+}
+
+.job-specifiaction span {
+  margin-right: 3px;
+}
+
+.job-stack {
+  border-top: 1px solid var(--grayish-cyan);
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+.job-btn {
+  border: none;
+  padding: 7px 5px;
+  margin: 0.3rem 0.5rem;
+  margin-left: 0;
+  color: var(--header-background--Color);
+  background-color: var(--filter-backgroundColor);
+  font-family: "Spartan";
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .filter-container {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .main-container {
+    padding: 5rem;
+  }
+
+  .jobs {
+    margin: 1.2rem;
+    margin-top: 0;
+    /* border: 1px solid; */
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 0.5rem 3fr 0.5rem 5fr;
+    grid-template-columns: 100px 3fr 5fr;
+    grid-column-gap: 0.5rem;
+    place-items: center;
+  }
+
+  .job-img {
+    margin: 0;
+  }
+
+  .job-stack {
+    border: none;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
+    justify-content: right;
+  }
 }
