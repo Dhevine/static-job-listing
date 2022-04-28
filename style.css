@@ -81,6 +81,7 @@ header {
  border: none;
  color: var(--desaturated-color);
  background-color: transparent;
+ cursor: pointer;
 }
 
 .select-icon{
@@ -107,6 +108,7 @@ header {
 .remove-icon {
  background-color: var(--desaturated-color);
  width: 100%;
+ cursor: pointer;
 }
 
 
@@ -200,6 +202,7 @@ header {
  font-family: 'Spartan';
  font-weight: 600;
  border-radius: 5px;
+ cursor: pointer;
 }
 
 @media screen and (min-width:700px) {

@@ -122,6 +122,13 @@ function append_Jobs(el) {
   jobListing__container.insertAdjacentHTML("beforeend", html)
 }
 
+function scroll_To_Top() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+}
 
 function clearFunc(arr) {
   document.querySelectorAll(".jobs").forEach((el) => el.remove())
@@ -149,8 +156,9 @@ function getData() {
       appendStacks_Used(job_stack, arr, "languages")
 
       jobListing__container.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("job-btn")) return
+        if (!e.target.classList.contains("job-btn")) return;
 
+        scroll_To_Top()
         const clicked_Option = e.target.textContent
         selectedList_Box.style.display = "flex"
         appendOption(clicked_Option)
