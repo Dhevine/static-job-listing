@@ -5,7 +5,36 @@ const clearBtn = document.getElementById('clear-btn')
 let currentArr = []
 let filteredArr = []
 let active = false
-let allArr = []
+let allArr = [];
+
+
+
+const meter = document.querySelector('.meter')
+const modal = document.querySelector('.modal')
+
+function animation() {
+  const checkWidth = (entries) => {
+    const [entry] = entries;
+  
+    if(entry.contentRect.width === 0) {
+      // switch in the animated classes
+      document.querySelector(".first__modal").classList.add("animate__modal");
+      document.querySelector(".second__modal").classList.add("animate__modal2");
+      document.body.style.overflow = 'auto';
+     
+      // deactivate modal
+      document.querySelector(".modal").style.backgroundColor= "transparent";
+     setTimeout(() =>  modal.style.display = 'none', 1000)
+
+    }
+  }
+
+  const resize_meter = new ResizeObserver(checkWidth)
+  resize_meter.observe(meter)
+
+}
+
+animation()
 
 // filter jobs
 function filterJobs(elem, Object_Arr) {

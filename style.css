@@ -34,9 +34,79 @@
 
 body {
   background-color: var(--background--color);
+  overflow-y: hidden;
 }
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 4;
+}
+
+.first__modal {
+  height: 50%;
+  background-color: black;
+}
+
+.animate__modal {
+  animation-name: animate_firstModal;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate_firstModal{
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.meter {
+  height: 3px;
+  background-color: white;
+  margin: 0 auto;
+  width: 0;
+  animation-name: animate_meter;
+  animation-duration: 3s;
+}
+
+@keyframes animate_meter {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+.second__modal {
+  height: 50%;
+  background-color: black;
+}
+
+
+.animate__modal2 {
+  animation-name: animate_secondModal;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes animate_secondModal {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 header {
-  /* height: 300px; */
   background-color: var(--header-background--Color);
 }
 
@@ -45,8 +115,7 @@ header {
 }
 
 .main-container {
-  /* border: 1px solid; */
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 1rem 1rem;
   background-color: var(--background--color);
 }
 
@@ -200,6 +269,11 @@ header {
   cursor: pointer;
 }
 
+@media screen and (min-width: 600px) {
+  .meter {
+    margin-inline: auto;
+  }
+}
 @media screen and (min-width: 700px) {
   .filter-container {
     margin-inline: auto;
