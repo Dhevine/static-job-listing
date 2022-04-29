@@ -149,6 +149,10 @@ header {
   cursor: pointer;
 }
 
+#clear-btn:hover{
+  border-bottom: 1px solid var(--desaturated-color);
+}
+
 .select-icon {
   border: 1px solid;
   margin: 0.4rem 0.2rem;
@@ -175,6 +179,10 @@ header {
   background-color: var(--desaturated-color);
   width: 100%;
   cursor: pointer;
+}
+
+.remove-icon:hover{
+  background-color: black;
 }
 
 .jobs {
@@ -240,6 +248,10 @@ header {
   word-spacing: 2px;
 }
 
+.job--type:hover{
+  color: var(--desaturated-color);
+}
+
 .job-specifiaction {
   color: var(--grayish-cyan);
   font-family: "Spartan";
@@ -267,6 +279,11 @@ header {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.job-btn:hover{
+  background-color: var(--desaturated-color);
+  color: #ffffff;
 }
 
 @media screen and (min-width: 600px) {
