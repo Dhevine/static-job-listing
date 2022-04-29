@@ -6,8 +6,8 @@ This is a solution to the [Job listings with filtering challenge](https://www.fr
 - [Table of contents](#table-of-contents)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -22,13 +22,14 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
+### Links
+
+- Live Site URL: [static-job-listing-project.netlify.app](https://static-job-listing-project.netlify.app)
+
 ### Screenshot
 
 ![](./images/desktop-design.jpg)
 
-### Links
-
-- Live Site URL: [static-job-listing-project.netlify.app](https://static-job-listing-project.netlify.app)
 
 ## My process
 
