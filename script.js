@@ -92,10 +92,10 @@ function available_Jobs(arr1, arr2) {
 
 // append ticked opton
 function appendOption(target) {
-  console.log(currentArr);
+
   if (currentArr.includes(target)) return //guard clause
   currentArr.unshift(target);
-  console.log(currentArr);
+  
 
   document
     .querySelector(".filter-container")
