@@ -122,7 +122,7 @@ function append_Jobs(el) {
       
       <div class = 'job-content'>
         <ul class="job--updates">
-        <li><h3>${el.company}</h3></li>
+        <li><h3 class ='company__name'>${el.company}</h3></li>
         <li class="new-tag" style="display: ${
           el.new ? "block" : "none"
         };">NEW!</li>
