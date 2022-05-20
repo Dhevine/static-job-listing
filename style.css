@@ -205,6 +205,8 @@ header {
 
 .company__name{
   font-size: 1.2rem;
+  font-family: 'Spartan';
+  font-weight: 500;
 }
 
 .jobs ul {
