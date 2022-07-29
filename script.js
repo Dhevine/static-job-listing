@@ -13,6 +13,8 @@ const meter = document.querySelector('.meter')
 const modal = document.querySelector('.modal')
 
 function animation() {
+  const resize_meter = new ResizeObserver(checkWidth)
+  resize_meter.observe(meter)
   const checkWidth = (entries) => {
     const [entry] = entries;
   
@@ -29,8 +31,6 @@ function animation() {
     }
   }
 
-  const resize_meter = new ResizeObserver(checkWidth)
-  resize_meter.observe(meter)
 
 }
 
