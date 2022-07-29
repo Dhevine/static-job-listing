@@ -34,7 +34,7 @@ function animation() {
 
 }
 
-animation()
+window.requestAnimationFrame(animation);
 
 // filter jobs
 function filterJobs(elem, Object_Arr) {
